@@ -1,0 +1,27 @@
+program katadanangka;
+uses crt;
+var
+tabAngka: array [1..20] of integer;
+tabkata: array [1..50] of string;
+kata	: string[50];
+a,z     : string;
+kataawal: string;
+kataakhir:string;
+n,i	: integer;
+
+begin
+writeln('masukan n: ');
+readln(n);
+readln(kata);
+	i:=1;
+        repeat
+        	readln(n);
+                i:=i+1;
+        until i>n;
+i:=1;
+	repeat
+        if tabkata[i,1] = kata[1] then
+        	write(tabkata[i],' ');
+	i:=i+1;
+        until i>n;
+end.
