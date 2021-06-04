@@ -1,0 +1,27 @@
+program bungaBank;
+{program ini akan menampilkan hasil bunga bank dari periode tahun yang diminta}
+uses crt;
+var
+        uangawal        : real;
+        sukubunga       : real;
+        bunga           : real;
+        uangakhir       :real;
+        periode         :integer;
+        i               :integer;
+begin
+        writeln('masukan suku bunga: ');
+        readln(sukubunga);
+        writeln('masukan jumlah periode tahun: ');
+        readln(periode);
+        uangawal:=1000000;
+        i:= 1;
+        writeln();
+        while i <= periode do
+                begin
+                uangakhir:=(sukubunga)*uangawal+uangawal;
+                bunga:=sukubunga*uangawal;
+                writeln('uang pada tahun ke',i,'Rp',uangakhir:10:2,'dengan bunga Rp',bunga:10:2 );
+                uangawal:=uangakhir;
+                i:=i+1;
+        end;
+end.
