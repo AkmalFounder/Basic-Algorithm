@@ -1,0 +1,100 @@
+uses crt;
+
+type
+hotel=record
+kelas,Btambahan,lamamenginap:integer;
+namaPlg:string;
+uang:longint;
+
+
+end;
+var
+
+h:hotel;
+hr:array[1..6] of longint;
+bt:array[1..2] of longint;
+total,kembali:real;
+disc:real;
+
+procedure biayatambahan();
+begin
+bt[1]:=100000;
+bt[2]:=150000;
+clrscr;
+writeln('========================');
+writeln('1. breakfast= Rp.100000');
+writeln('2. Extra Bed= Rp.150000');
+writeln('========================');
+readln(h.Btambahan);
+end;
+
+case h.Btambahan of
+
+1:total:= hr[1]*h.lamamenginap;
+2:total:= hr[2]*h.lamamenginap;
+3:total:= hr[3]*h.lamamenginap;
+4:total:= hr[4]*h.lamamenginap;
+5:total:= hr[5]*h.lamamenginap;
+6:total:= hr[6]*h.lamamenginap;
+
+procedure jeniskamar();
+begin
+clrscr;
+hr[1]:=500000;
+hr[2]:=625000;
+hr[3]:=300000;
+hr[4]:=350000;
+hr[5]:=375000;
+hr[6]:=200000;
+hr[7]:=250000;
+
+
+
+writeln('====== HOTEL SAMUDRA CITY ======');
+write('masukan nama Pelanggan:');
+readln(h.namaPlg);
+writeln('silahkan pilih kelas kamar');
+writeln('==========================');
+writeln('1. Super Deluxe(weekdays) harga= Rp.500000/malam');
+writeln('2. Super Deluxe(weekend) harga= Rp.625000/malam');
+writeln('3. Deluxe 2 bed (weekdays) harga= Rp.300000/malam');
+writeln('4. Deluxe 1 bed (weekdays) harga= Rp.350000/malam');
+writeln('5. Deluxe       (weekend) harga= Rp.375000/malam');
+writeln('6. Regular     (weekdays) harga= Rp.200000/malam');
+writeln('7. Regular     (weekend) harga= Rp.250000/malam');
+readln(h.kelas);
+write('berapa lama anda menginap:');
+readln(h.lamamenginap);
+if (h.lamamenginap > 2) then begin disc := 20/100;
+
+writeln ('disc = 20%');
+readln;
+end;
+case h.kelas of
+
+1:total:= hr[1]*h.lamamenginap;
+2:total:= hr[2]*h.lamamenginap-disc;
+3:total:= hr[3]*h.lamamenginap;
+4:total:= hr[4]*h.lamamenginap;
+5:total:= hr[5]*h.lamamenginap;
+6:total:= hr[6]*h.lamamenginap;
+
+
+end;
+
+writeln('======================');
+writeln('total        =Rp.',total:0:2);
+writeln('======================');
+
+writeln('masukan jumlah pembayaran:');
+readln(h.uang);
+kembali:=h.uang-total;
+writeln('kembalian =Rp.',kembali:0:2);
+writeln('TERIMA KASIH');
+end;
+
+begin
+jeniskamar;
+
+readln;
+END.
