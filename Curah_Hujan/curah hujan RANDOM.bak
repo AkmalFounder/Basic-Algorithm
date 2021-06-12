@@ -1,0 +1,17 @@
+program tetesan_hujanRANDOM;
+uses crt;
+var
+        i          :integer;
+        much       :longint;
+begin
+        clrscr;
+        randomize;
+        writeln('Masukan Banyaknya Tetesan Air: ');
+        readln(much);
+        for i:=1 to 4 do
+        begin
+                writeln('Curah hujan daerah ',i,': ',random(much),' Milimeter');
+        end;
+        //writeln('
+        readln;
+end.
