@@ -1,0 +1,18 @@
+program fungsi;
+uses crt;
+function <a,b>  :integer;
+        begin
+                luas:= a*b;
+        end;
+var
+        x,y     :integer;
+begin
+        clrscr;
+        writeln('masukan lebar persegi panjang: ');
+        readln(x);
+        writeln('masukan panjang persegi: ');
+        readln(y);
+        luas:=x*y;
+        writeln('luas persegi panjang adalah: ',x,y);
+        readln;
+end.
