@@ -1,0 +1,26 @@
+procedure dataPembeli();
+var
+    choice  : char;
+    Npembeli: string;
+
+begin
+    writeln('Silakan Masukan Nama-nama Pembeli: ');
+    readln(Npembeli);
+    i:=1;
+    jum:=0;
+    while i<=Npembeli do
+    begin
+        writeln('Urutan antrian pembeli');
+        case nama of
+        1: 5000;
+        2: 8000;
+        3: 10000;
+        4: 12000;
+        5: 15000;
+        end;
+
+        i:=i+1;
+    end;
+    writeln('apakah anda sudah yakin dengan data yang diatas ? (y/n)');
+    readln(choice);
+end;
