@@ -1,0 +1,21 @@
+program LatihanKetik;
+{program ini akan menampilkan angka yang telah ditentukan kedalam masing-masing bilangan}
+uses crt;
+var
+        a,i,jum,bil     :integer;
+
+begin
+        clrscr;
+        jum:=11;
+        repeat
+                writeln;
+                write('Masukan bilangan 1: ');
+                readln(a);
+                i:=i+1;
+                write('Masukan bilangan 2: ');
+                readln(bil);
+                i:=i+1
+        until(a mod 2<>0) and (bil mod 2 <>0);
+        writeln('program selesai');
+        readln;
+end.
