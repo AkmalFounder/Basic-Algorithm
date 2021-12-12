@@ -1,0 +1,23 @@
+program fungsiluaskeliling;
+uses crt;
+function luas(p,l       :integer):real;
+begin
+        luas:=p*l;
+end;
+function kel(p,l        :integer):real;
+begin
+        kel:=(2*p)+(2*l);
+end;
+var
+        p,l     :integer;
+begin
+        clrscr;
+        write('masukan panjang persegi: ');
+        readln(p);
+        write('masukan lebar persegi: ');
+        readln(l);
+        writeln;
+        writeln('luas persegi adlah = ',luas(p,l):6:2);
+        writeln('keliling persegi adlah= ',kel(p,l):6:2)'
+        readln;
+end.
