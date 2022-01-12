@@ -1,0 +1,45 @@
+program Tendangan;
+uses crt;
+var
+
+function is kelipatan2(angka: integer):boolean;
+begin
+        if angka mod 2=0 then
+                angka:=true;
+                writeln('tendangan terlalu ke kiri atau ke kanan')
+        else
+                angka:=false;
+end;
+function is kelipatan5(angka:integer):boolean;
+begin
+        if angka mod 5=0 then;
+                angka:=true;
+                writeln('tendangan terlalu ke atas')
+        else
+                angka:=false;
+end;
+function is ganjil(angka:integer):boolean;
+begin
+        if angka mod 5<>0 then
+                angka:=true;
+                writeln('tendangan tepat sasaran')
+        else
+                angka:=false;
+end;
+{program utama}
+var
+
+begin
+        clrscr;
+        i:=0:
+        repeat
+        begin
+                writeln('masukan N: ');
+                readln(n);
+                        n:=n+1;
+                        i:=i+1;
+        until i=5;
+        writeln('superb marcus',is kelipatan2(angka) and (is kelipatan5(angka));
+        writeln('well done',is ganjil(angka));
+        readln;
+end.
