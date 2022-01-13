@@ -1,0 +1,12 @@
+program TebakAngka;
+uses crt;
+var
+        a : integer;
+begin
+        write('Masukan Angka Anda : ');
+        readln(a);
+        if(a=111) then
+                writeln('selamat jawaban anda benar : ');
+        else
+                write('Maaf coba lagi')
+end.
